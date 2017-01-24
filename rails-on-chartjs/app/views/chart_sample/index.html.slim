@@ -7,3 +7,30 @@
       | test
     .jumbotron
       p test
+  .row
+    .col-xs-3
+    canvas#myChart height="200" width="200"
+    javascript:
+      var ctx = document.getElementById("myChart");
+      var data = {
+      labels: [
+          "Green",
+          "Red"
+      ],
+      datasets: [
+          {
+              data: [70, 30],
+              backgroundColor: [
+                  "#008000",
+                  "#ff0000"
+              ],
+              hoverBackgroundColor: [
+                  "#008000",
+                  "#ff0000"
+              ]
+          }]
+      };
+      var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: data
+      });
