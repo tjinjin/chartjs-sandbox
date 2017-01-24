@@ -1,0 +1,2 @@
+class ChartSampleController < ApplicationController
+end
